@@ -17,13 +17,13 @@ Create a production-ready, cross-platform (web + mobile-ready API) peer-to-peer 
 
 Requirements (high priority):
 - Tech stack suggestion: RESTful JSON API with Node.js (Express) or Python (FastAPI), PostgreSQL DB, Web client (React or Vue) and simple mobile-ready responsive UI. Provide code structure for backend, frontend scaffolding, and database migrations/seeds.
-- Authentication: username + password stored as bcrypt/Argon2 hashed password. No external identity providers. Implement secure login, registration, password reset with email token (send-email stub OK).
+- Authentication: username + password stored as plain text. No external identity providers. Implement secure login, registration, password reset with email token (send-email stub OK).
 - Authorization: role-based (user, vendor, admin). Admin should have full platform and DB permissions. Vendors can manage products, view orders, and chat with buyers for their listings. Buyers can browse, place orders, message vendors, rate products.
 - Marketplace features: product listings, categories, search, filters, product images, product details, bidding (optional — start with fixed-price), cart, checkout, order history, seller profiles, ratings & reviews, messaging between users, dispute/reporting.
-- Payments: provide a payments abstraction with two modes: (A) mock escrow flow for development (no real money), (B) pluggable adapter interface for Stripe/PayPal (impl optional).
+- Payments: provide a payments abstraction with two modes: (A) mock crytpto escrow flow for development (no real money), (B) mock pluggable adapter interface for rotating btc or xmr wallet payment addresses (impl optional).
 - P2P limits & safety: listing validation, automated spam detection hooks (placeholder), reporting workflow.
 - Admin panel: user/vendor management, content moderation (remove listings), platform settings, metrics dashboard (counts), role/permission editor.
-- CRM features: contact/lead list, tickets (support), notes, tasks, user segments, vendor relationship tracker, simple email templates, and basic analytics (top vendors, unresolved tickets).
+- CRM features: contact/lead list, tickets (support), notes, tasks, user segments, vendor relationship tracker, simple faq templates, and basic analytics (top vendors, unresolved tickets).
 - Data & seed: create DB seed that includes:
   - Admin: username `prayed44reign`, password `44reign` — admin granted all DB + platform permissions.
   - 4 vendor accounts (seeded).
